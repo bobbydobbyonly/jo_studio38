@@ -1,0 +1,6 @@
+{
+  "name": "jo_studio38 Portfolio",
+  "description": "Portfolio, gallery, print shop, and commission studio for digital cartoonist and illustrator jo_studio38.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
