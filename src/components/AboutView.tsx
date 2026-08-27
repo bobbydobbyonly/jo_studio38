@@ -1,45 +1,15 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Send, Sparkles, Monitor, Layers, Mail, Heart, Undo, Download, Eraser, Check, Camera, RefreshCw } from 'lucide-react';
+import { Send, Sparkles, Mail, Eraser, Download, Check } from 'lucide-react';
 import { JoProfileAvatar } from './JoProfileAvatar';
-import { useProfilePhoto } from '../context/ProfilePhotoContext';
 
 export const AboutView: React.FC = () => {
-  const { savePhoto, resetPhoto, hasPhoto } = useProfilePhoto();
-
   // Mini Interactive Studio Scratchpad State
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [brushColor, setBrushColor] = useState('#1a1a1a');
-  const [brushSize, setBrushSize] = useState(3);
+  const [brushSize] = useState(3);
   const [activeStamp, setActiveStamp] = useState<'pen' | 'cat' | 'ghost' | 'coffee'>('pen');
   const [contactSubmitted, setContactSubmitted] = useState(false);
-
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    console.log('[AboutView] handleFileUpload triggered, file:', file?.name, 'type:', file?.type, 'size:', file?.size);
-    if (!file) return;
-
-    // Use the uploaded file directly as the profile image (no image generation, no AI models, no canvas alterations)
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const dataUrl = event.target?.result as string;
-      console.log('[AboutView] FileReader loaded, dataUrl length:', dataUrl?.length);
-      if (dataUrl) {
-        savePhoto(dataUrl);
-      }
-    };
-    reader.onerror = (err) => {
-      console.error('[AboutView] FileReader error:', err);
-    };
-    reader.readAsDataURL(file);
-    // Clear input value so selecting the same file triggers change
-    e.target.value = '';
-  };
-
-  const handleResetProfilePhoto = () => {
-    resetPhoto();
-  };
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -140,46 +110,8 @@ export const AboutView: React.FC = () => {
       <section className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start border-b border-gray-200 pb-12">
         {/* Left Column: Portrait Card */}
         <div className="bg-white p-6 rounded-xs border border-gray-200 shadow-2xs space-y-4 text-center">
-          <div className="relative group w-32 h-32 rounded-full overflow-hidden mx-auto bg-white border-4 border-[#f0f0f0] shadow-sm flex items-center justify-center">
+          <div className="w-32 h-32 rounded-full overflow-hidden mx-auto bg-white border-4 border-[#f0f0f0] shadow-sm flex items-center justify-center p-1">
             <JoProfileAvatar size="xl" alt="Jo Profile" />
-            <button
-              onClick={() => fileInputRef.current?.click()}
-              aria-label="Upload original profile photo"
-              className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center text-white text-xs font-mono font-medium gap-1 cursor-pointer"
-            >
-              <Camera className="w-5 h-5" />
-              <span>Change Photo</span>
-            </button>
-          </div>
-
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="image/png, image/jpeg, image/webp"
-            className="hidden"
-            onChange={handleFileUpload}
-          />
-
-          <div className="flex flex-col items-center gap-2">
-            <button
-              type="button"
-              onClick={() => fileInputRef.current?.click()}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-mono font-medium rounded transition-colors cursor-pointer"
-            >
-              <Camera className="w-3.5 h-3.5" />
-              <span>{hasPhoto ? 'Change Photo' : 'Upload Photo'}</span>
-            </button>
-
-            {hasPhoto && (
-              <button
-                type="button"
-                onClick={handleResetProfilePhoto}
-                className="text-[11px] font-mono text-gray-500 hover:text-red-600 flex items-center gap-1 cursor-pointer underline"
-              >
-                <RefreshCw className="w-3 h-3" />
-                Reset Photo
-              </button>
-            )}
           </div>
 
           <div>
