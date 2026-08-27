@@ -1,11 +1,10 @@
 import React from 'react';
-import fixedJoProfile from '../assets/images/jo_profile.jpg';
+import joProfileSvg from '../assets/images/jo_profile.svg';
 
 interface JoProfileAvatarProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'custom';
   alt?: string;
-  usePhoto?: boolean;
 }
 
 export const JoProfileAvatar: React.FC<JoProfileAvatarProps> = ({
@@ -22,12 +21,12 @@ export const JoProfileAvatar: React.FC<JoProfileAvatarProps> = ({
   };
 
   return (
-    <div className={`relative overflow-hidden bg-white ${sizeClasses[size]} ${className}`}>
+    <div className={`relative overflow-hidden bg-white flex items-center justify-center ${sizeClasses[size]} ${className}`}>
       <img
-        src={fixedJoProfile}
+        src={joProfileSvg}
         alt={alt}
-        referrerPolicy="no-referrer"
-        className="w-full h-full object-contain p-0.5"
+        className="w-full h-full object-contain select-none pointer-events-none"
+        loading="eager"
       />
     </div>
   );

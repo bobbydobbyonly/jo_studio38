@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650" width="100%" height="100%">
+  <defs>
+    <!-- Filter for slight organic hand-drawn stroke texture -->
+    <filter id="handdrawn" x="-5%" y="-5%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+
+  <g id="jo_character" filter="url(#handdrawn)">
+    <!-- 1. Top Hair Bun -->
+    <!-- Bun Base Shape -->
+    <path
+      d="M 330 170 
+         C 300 130, 310 70, 370 60 
+         C 400 35, 470 40, 490 85 
+         C 530 90, 550 140, 500 180 
+         Z"
+      fill="#282a2e"
+      stroke="#1e2022"
+      stroke-width="7"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <!-- Bun highlight sheen -->
+    <path
+      d="M 360 85 C 380 65, 430 65, 450 80 C 420 85, 385 95, 360 85 Z"
+      fill="#43474d"
+      opacity="0.6"
+    />
+
+    <!-- 2. Dark Navy Hair Ribbon / Tie -->
+    <path
+      d="M 335 185 
+         C 320 170, 380 155, 430 160 
+         C 480 155, 525 170, 510 190 
+         C 480 205, 440 195, 400 198 
+         C 360 198, 335 195, 335 185 Z"
+      fill="#172b43"
+      stroke="#101c2c"
+      stroke-width="6"
+      stroke-linejoin="round"
+    />
+
+    <!-- 3. Shoulders & Royal Blue Shirt (Behind Neck/Head) -->
+    <path
+      d="M 320 590 
+         C 335 530, 370 510, 400 515 
+         C 430 510, 470 530, 530 585 
+         C 545 615, 305 620, 320 590 Z"
+      fill="#1b5bb5"
+      stroke="#162238"
+      stroke-width="7"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <!-- Shirt center crease line -->
+    <path
+      d="M 418 535 L 415 605"
+      stroke="#14213d"
+      stroke-width="5.5"
+      stroke-linecap="round"
+    />
+
+    <!-- 4. Neck -->
+    <path
+      d="M 395 490 L 392 535 C 410 540, 435 540, 452 532 L 448 490 Z"
+      fill="#f4cca9"
+      stroke="#202224"
+      stroke-width="6"
+      stroke-linejoin="round"
+    />
+
+    <!-- 5. Side Ears (Behind Cheeks) -->
+    <!-- Left Ear -->
+    <path
+      d="M 295 405 C 240 395, 230 465, 285 480 C 298 482, 305 470, 310 455 Z"
+      fill="#f4cca9"
+      stroke="#202224"
+      stroke-width="7"
+      stroke-linejoin="round"
+    />
+    <!-- Left Ear Inner Curve -->
+    <path
+      d="M 270 445 C 265 435, 280 430, 285 440"
+      fill="none"
+      stroke="#202224"
+      stroke-width="6"
+      stroke-linecap="round"
+    />
+
+    <!-- Right Ear -->
+    <path
+      d="M 545 400 C 600 390, 615 455, 560 475 C 545 480, 535 465, 530 450 Z"
+      fill="#f4cca9"
+      stroke="#202224"
+      stroke-width="7"
+      stroke-linejoin="round"
+    />
+    <!-- Right Ear Inner Curve -->
+    <path
+      d="M 575 430 C 585 440, 570 455, 560 445"
+      fill="none"
+      stroke="#202224"
+      stroke-width="6"
+      stroke-linecap="round"
+    />
+
+    <!-- 6. Hair Back/Dome & Tufts -->
+    <path
+      d="M 285 400 
+         C 260 270, 330 180, 420 185 
+         C 510 180, 580 260, 560 400 
+         C 580 435, 585 485, 545 500 
+         C 505 510, 480 495, 450 490 
+         C 400 495, 360 510, 310 495 
+         C 270 480, 270 435, 285 400 Z"
+      fill="#282a2e"
+      stroke="#1e2022"
+      stroke-width="7"
+      stroke-linejoin="round"
+    />
+
+    <!-- 7. Face / Skin Silhouette -->
+    <path
+      d="M 315 375 
+         C 315 285, 370 270, 430 270 
+         C 490 270, 535 285, 540 375 
+         C 545 450, 520 500, 425 500 
+         C 335 500, 310 450, 315 375 Z"
+      fill="#f4cca9"
+      stroke="#202224"
+      stroke-width="7"
+      stroke-linejoin="round"
+    />
+
+    <!-- 8. Cheek Blush Marks (Dark grey smudges) -->
+    <!-- Left Cheek Smudge -->
+    <path
+      d="M 330 462 C 345 458, 365 458, 380 462 C 375 469, 340 470, 330 462 Z"
+      fill="#6b645e"
+      opacity="0.85"
+    />
+    <!-- Right Cheek Smudge -->
+    <path
+      d="M 465 455 C 485 450, 508 452, 520 457 C 510 466, 475 465, 465 455 Z"
+      fill="#6b645e"
+      opacity="0.85"
+    />
+
+    <!-- 9. Big Expressive Eyes -->
+    <!-- Left Eye (White sclera) -->
+    <path
+      d="M 342 365 
+         C 328 395, 328 440, 348 460 
+         C 370 475, 402 465, 405 435 
+         C 410 395, 395 355, 368 350 
+         C 352 348, 345 355, 342 365 Z"
+      fill="#ffffff"
+      stroke="#202224"
+      stroke-width="7"
+      stroke-linejoin="round"
+    />
+    <!-- Left Pupil (Dark Oval) -->
+    <ellipse
+      cx="384"
+      cy="420"
+      rx="10"
+      ry="19"
+      fill="#232528"
+    />
+
+    <!-- Right Eye (White sclera) -->
+    <path
+      d="M 462 355 
+         C 440 375, 438 425, 452 452 
+         C 470 470, 515 468, 522 435 
+         C 530 385, 510 340, 480 338 
+         C 468 338, 464 345, 462 355 Z"
+      fill="#ffffff"
+      stroke="#202224"
+      stroke-width="7"
+      stroke-linejoin="round"
+    />
+    <!-- Right Pupil (Dark Oval) -->
+    <ellipse
+      cx="474"
+      cy="410"
+      rx="11"
+      ry="21"
+      fill="#232528"
+    />
+
+    <!-- 10. Forehead Eyebrow Marks -->
+    <!-- Left Eyebrow (Sharp inward angled hook) -->
+    <path
+      d="M 378 288 C 382 305, 376 320, 372 328"
+      fill="none"
+      stroke="#202224"
+      stroke-width="7"
+      stroke-linecap="round"
+    />
+    <path
+      d="M 382 305 L 398 318"
+      fill="none"
+      stroke="#202224"
+      stroke-width="6.5"
+      stroke-linecap="round"
+    />
+
+    <!-- Right Eyebrow (Sharp inward angled stroke) -->
+    <path
+      d="M 470 285 C 462 305, 455 318, 442 328"
+      fill="none"
+      stroke="#202224"
+      stroke-width="7"
+      stroke-linecap="round"
+    />
+
+    <!-- 11. Cute Small 'O' Mouth -->
+    <ellipse
+      cx="458"
+      cy="468"
+      rx="7"
+      ry="9"
+      fill="#f4cca9"
+      stroke="#202224"
+      stroke-width="6"
+    />
+
+    <!-- 12. Whisker / Hair Strands (Side flyaways) -->
+    <!-- Left hair whiskers -->
+    <path d="M 270 380 C 245 385, 230 395, 225 400" fill="none" stroke="#202224" stroke-width="5" stroke-linecap="round" />
+    <path d="M 275 395 C 245 408, 232 418, 226 422" fill="none" stroke="#202224" stroke-width="5" stroke-linecap="round" />
+    <path d="M 280 410 C 255 425, 240 435, 235 440" fill="none" stroke="#202224" stroke-width="5" stroke-linecap="round" />
+
+    <!-- Right hair whiskers -->
+    <path d="M 570 375 C 600 378, 620 385, 628 392" fill="none" stroke="#202224" stroke-width="5" stroke-linecap="round" />
+    <path d="M 565 390 C 598 400, 618 408, 626 415" fill="none" stroke="#202224" stroke-width="5" stroke-linecap="round" />
+    <path d="M 560 405 C 590 418, 608 425, 615 430" fill="none" stroke="#202224" stroke-width="5" stroke-linecap="round" />
+  </g>
+</svg>
